@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Robot Control Page</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <script src="controllers/robotApp.js"></script>
+    </head>
+
+    <body class="container">
+
+        <div class="jumbotron">
+            <h1>CEN 4935 Maintenance Project</h1>
+        </div>
+
+        <!-- Video View (Insert Video stream code in here) -->
+        <div class="row">
+            <div class="col-xs-12" align="center">
+                <iframe id="camstream" src="https://player.twitch.tv/?channel=gonzalewski" 
+                width="640" height="480" scrolling="no" allowfullscreen="false" allowfullscreen="false"></iframe>
+            </div>
+        </div>
+
+        <!-- User Control -->
+        <div class="row" ng-app="robotApp" align="center" ng-controller="robotControlController">
+            <button type="button" class="btn btn-default col-xs-1-offset-5" ng-click="goUp()">Forward</button><br><br>
+            <span>
+                <button type="button" class="btn btn-default col-xs-1-offest-3" ng-click="turnLeft()">Left</button>
+                <button type="button" class="btn btn-default col-xs-1-offset-8" ng-click="turnRight()">Right</button>
+            </span><br><br>
+            <button type="button" class="btn btn-default col-xs-1-offset-5" ng-click="goDown()">Back</button><br><br>
+            Forward/Back Movement: <input type="text" ng-model="movementAmount" /><br><br>
+            Left/Right Rotation: <input type="text" ng-model="rotationAmount" />
+        </div>
+    </body>
+</html>

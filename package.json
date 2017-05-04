@@ -1,0 +1,14 @@
+{
+  "name": "cen-4935-client",
+  "version": "1.0.0",
+  "description": "Client for relay server for robot control",
+  "main": "alive.js",
+  "dependencies": {
+    "express": "*"  
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SomeNerdNamedSteve",
+  "license": "MIT"
+}
